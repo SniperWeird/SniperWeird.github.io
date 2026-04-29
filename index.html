@@ -278,6 +278,49 @@
         </div>
     </div>
 
+    <script>
+        // 1. كود إخفاء الشاشة الترحيبية
+        setTimeout(() => {
+            const splash = document.getElementById('splash-screen');
+            if (splash) {
+                splash.style.opacity = '0';
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                }, 1000);
+            }
+        }, 3000);
+
+        // 2. دالة إظهار الدرس (تخفي الواجهة الرئيسية وتظهر المحتوى)
+        function showLesson(lessonId) {
+            const mainUI = document.getElementById('main-ui');
+            if (mainUI) {
+                mainUI.style.display = 'none';
+            }
+            
+            // إخفاء أي درس مفتوح أولاً
+            document.querySelectorAll('.lesson-content').forEach(lesson => {
+                lesson.style.display = 'none';
+            });
+
+            // إظهار الدرس المطلوب
+            const target = document.getElementById(lessonId);
+            if (target) {
+                target.style.display = 'block';
+            }
+            window.scrollTo(0,0);
+        }
+
+        // 3. دالة العودة للقائمة الرئيسية
+        function hideLesson() {
+            document.querySelectorAll('.lesson-content').forEach(lesson => {
+                lesson.style.display = 'none';
+            });
+            
+            const mainUI = document.getElementById('main-ui');
+            if (mainUI) {
+                mainUI.style.display = 'block';
+            }
+        }
     </script>
 
 </body>
