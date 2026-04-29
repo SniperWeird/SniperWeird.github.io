@@ -46,8 +46,6 @@
         @keyframes typing { from { width: 0 } to { width: 100% } }
         @keyframes blink { from, to { border-color: transparent } 50% { border-color: var(--primary-color) } }
 
-        /* 2. الواجهة الرئيسية */
-        /* التنسيق الجديد للواجهة المرتبة */
         .container {
             max-width: 900px;
             margin: 50px auto;
@@ -103,10 +101,8 @@
         }
         .btn-back:hover { background: var(--primary-color); color: black; }
 
-
-        /* 3. منطقة الشرح */
         .lesson-content {
-            display: none; /* مخفي افتراضياً */
+            display: none;
             background: #252525;
             padding: 30px;
             border-radius: 15px;
@@ -116,21 +112,9 @@
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        .image-box {
-            background: #444;
-            width: 100%;
-            height: 300px;
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            color: #888;
-        }
-
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             height: 0;
             margin: 20px 0;
         }
@@ -154,7 +138,7 @@
     <div id="main-ui" class="container">
         <div class="main-header">
             <h1 style="color: var(--primary-color);">🧬 مشروع الأحياء 🧬</h1>
-            <p> مرحباً بك ، اختر درساً لتبدأ التعلم</p>
+            <p> مرحباً بك، اختر درساً لتبدأ التعلم</p>
         </div>
 
         <div class="lesson-buttons">
@@ -176,103 +160,63 @@
                 <div class="arrow">←</div>
             </div>
         </div>
-
-
-<div id="lesson1" class="container lesson-content" style="display: none;">
-
-
-    <h2 style="color: var(--primary-color); text-align: center;">🩸 الإخراج لدى الإنسان</h2>
-    
-    <p>لكي يعيش الإنسان بصورة طبيعية، يجب أن يتخلص جسمه من الفضلات. إليك ملخص العملية:</p>
-
-    <div class="important-note" style="background: #2a3d30; padding: 15px; border-right: 5px solid var(--primary-color); border-radius: 5px;">
-        <strong>ما هو الإخراج؟</strong> هو عملية التخلص من فضلات النيتروجين (اليوريا Urea) الناتجة عن هضم البروتينات، والحفاظ على <b>الاتزان الداخلي (Homeostasis)</b> لسوائل الجسم.
     </div>
 
-    <h3>1. الأعضاء الأساسية (الكليتان - Kidneys)</h3>
-    <p>تقع الكليتان عند قاع القفص الصدري وظيفتها الأساسية <b>ترشيح الدم</b> من الفضلات. الدم الذي يدخل الكلية يشكل حوالي 25% من دم الجسم في أي وقت!</p>
-    
-    <div style="text-align: center;">
-        <img src="IMG_0388.jpeg" alt="الجهاز الإخراجي" style="width: 100%; max-width: 500px; border-radius: 15px; border: 2px solid #444;">
-        <p style="font-size: 0.9rem; color: #888;">شكل (1): هيكل الجهاز الإخراجي وموقع الكليتين.</p>
-    </div>
+    <div id="lesson1" class="container lesson-content">
+        <h2 style="color: var(--primary-color); text-align: center;">🩸 الإخراج لدى الإنسان</h2>
+        
+        <p>لكي يعيش الإنسان بصورة طبيعية، يجب أن يتخلص جسمه من الفضلات.</p>
 
-    <h3>2. مسار البول (من الكلية إلى الخارج)</h3>
-    <p>بعد ترشيح الدم وتكوين البول، يمر بالخطوات التالية:</p>
-    <ul style="list-style-type: square; padding-right: 20px;">
-        <li><b>الحالب (Ureter):</b> أنبوب طويل (25-30 سم) ينقل البول من الكلية للمثانة.</li>
-        <li><b>المثانة البولية:</b> كيس عضلي يخزن البول مؤقتاً.</li>
-        <li><b>مجرى البول (Urethra):</b> القناة التي يطرد من خلالها البول لخارج الجسم.</li>
-    </ul>
-
-    <div class="important-note" style="background: #333; padding: 10px;">
-        💡 <b>كيف نعرف أننا بحاجة للتبول؟</b> عندما تمتليء المثانة، ترسل عضلاتها إشارات للدماغ، والذي يعطي أمراً للعضلات لتنقبض وتطرد البول.
-    </div>
-
-    <h3>📺 شاهد هذا الفيديو لتبسيط العملية:</h3>
-    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 15px; margin: 20px 0; border: 2px solid var(--primary-color);">
-    <iframe 
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-        src="https://www.youtube.com/embed/p3Hn4n58ccQ" 
-        title="YouTube video player" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-</div>
-
-    </div>
-
-    <div style="text-align: center; margin-top: 20px;">
-        <button onclick="hideLesson()" class="btn" style="padding: 10px 25px;">العودة للقائمة الرئيسية</button>
-    </div>
-</div>
-
-            
-
-            </div>
-            
+        <div style="background: #2a3d30; padding: 15px; border-right: 5px solid var(--primary-color); border-radius: 5px;">
+            <strong>ما هو الإخراج؟</strong> هو عملية التخلص من فضلات النيتروجين (اليوريا Urea) والحفاظ على الاتزان الداخلي.
         </div>
 
-            <div id="lesson2" class="container lesson-content">
+        <h3>1. الأعضاء الأساسية (الكليتان)</h3>
+        <p>تقع الكليتان عند قاع القفص الصدري ووظيفتهما الأساسية ترشيح الدم.</p>
+        
+        <div style="text-align: center;">
+            <img src="IMG_0388.jpeg" alt="الجهاز الإخراجي" style="width: 100%; max-width: 500px; border-radius: 15px; border: 2px solid #444;">
+        </div>
+
+        <h3>2. مسار البول</h3>
+        <ul>
+            <li><b>الحالب:</b> ينقل البول للمثانة.</li>
+            <li><b>المثانة:</b> تخزن البول مؤقتاً.</li>
+            <li><b>مجرى البول:</b> يطرد البول للخارج.</li>
+        </ul>
+
+        <h3>📺 فيديو توضيحي:</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/p3Hn4n58ccQ" allowfullscreen></iframe>
+        </div>
+
+        <div style="text-align: center;">
+            <button onclick="hideLesson()" class="btn-back">العودة للقائمة الرئيسية</button>
+        </div>
+    </div>
+
+    <div id="lesson2" class="container lesson-content">
         <h2 style="color: var(--primary-color); text-align: center;">💪 عضلات الإنسان الهيكلية</h2>
         
         <div style="background: #222; padding: 20px; border-radius: 15px; margin-bottom: 25px; border-right: 5px solid var(--primary-color);">
-            <p>تعتبر العضلات الهيكلية هي المسؤولة عن حركة جسمك، وتتميز بتخطيطها الناتج عن ترتيب خيوط البروتين بداخلها.</p>
+            <p>تتميز العضلات الهيكلية بتخطيطها الناتج عن ترتيب خيوط البروتين.</p>
         </div>
 
-        <h3>1. التركيب المجهري للعضلة:</h3>
-        <p>تتكون العضلة من مستويات تنظيم دقيقة جداً كما يظهر في الشكل:</p>
-        
-        <div style="background: #333; padding: 15px; border-radius: 10px; margin: 15px 0;">
-            <ul>
-                <li><b>الحزمة العضلية:</b> مجموعة من الألياف محاطة بنسيج ضام.</li>
-                <li><b>اللييف العضلي (Myofibril):</b> تراكيب أسطوانية داخل الليف العضلي.</li>
-                <li><b>الخيوط البروتينية:</b> وهي نوعان:
-                    <ul>
-                        <li><span style="color: #ff4d4d;">الميوزين (Myosin):</span> خيوط سميكة.</li>
-                        <li><span style="color: #4da6ff;">الأكتين (Actin):</span> خيوط رفيعة.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <h3>1. التركيب المجهري:</h3>
+        <ul>
+            <li><b>الميوزين:</b> خيوط سميكة.</li>
+            <li><b>الأكتين:</b> خيوط رفيعة.</li>
+        </ul>
 
-        <img src="muscle_structure.png" alt="تركيب العضلة الهيكلية" style="width: 100%; border-radius: 10px; margin: 15px 0;">
-        <p style="text-align: center; color: #888; font-size: 0.9rem;">شكل (1): مستويات تنظيم العضلة الهيكلية من الحزمة وصولاً للأكتين والميوزين.</p>
+        <img src="muscle_structure.png" alt="تركيب العضلة" style="width: 100%; border-radius: 10px;">
 
         <h3>2. نظرية الخيوط المنزلقة:</h3>
-        <p>كيف تنقبض العضلة؟ تنقبض عندما تنزلق خيوط <b>الأكتين</b> الرفيعة فوق خيوط <b>الميوزين</b> السميكة، مما يؤدي لتقارب خطوط Z وقصر طول القطعة العضلية (Sarcomere).</p>
+        <p>تنقبض العضلة عندما تنزلق خيوط الأكتين فوق الميوزين.</p>
 
-        <img src="muscle_action.png" alt="انقباض وانبساط المرفق" style="width: 100%; border-radius: 10px; margin: 15px 0;">
-        <p style="text-align: center; color: #888; font-size: 0.9rem;">شكل (2): آلية عمل العضلات القابضة والباسطة في الذراع.</p>
+        <img src="muscle_action.png" alt="عمل العضلات" style="width: 100%; border-radius: 10px;">
 
-        <h3>🎥 فيديو توضيحي لنظرية الانزلاق:</h3>
-        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 20px 0; border-radius: 10px;">
-            <iframe 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-                src="https://www.youtube.com/embed/hlCcEOum3Cg" 
-                title="آلية انقباض العضلات" 
-                allowfullscreen>
-            </iframe>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/hlCcEOum3Cg" allowfullscreen></iframe>
         </div>
 
         <div style="text-align: center;">
@@ -281,47 +225,25 @@
     </div>
 
     <script>
-        // 1. كود إخفاء الشاشة الترحيبية
+        // إخفاء الشاشة الترحيبية
         setTimeout(() => {
             const splash = document.getElementById('splash-screen');
             if (splash) {
                 splash.style.opacity = '0';
-                setTimeout(() => {
-                    splash.style.display = 'none';
-                }, 1000);
+                setTimeout(() => splash.style.display = 'none', 1000);
             }
         }, 3000);
 
-        // 2. دالة إظهار الدرس (تخفي الواجهة الرئيسية وتظهر المحتوى)
         function showLesson(lessonId) {
-            const mainUI = document.getElementById('main-ui');
-            if (mainUI) {
-                mainUI.style.display = 'none';
-            }
-            
-            // إخفاء أي درس مفتوح أولاً
-            document.querySelectorAll('.lesson-content').forEach(lesson => {
-                lesson.style.display = 'none';
-            });
-
-            // إظهار الدرس المطلوب
-            const target = document.getElementById(lessonId);
-            if (target) {
-                target.style.display = 'block';
-            }
+            document.getElementById('main-ui').style.display = 'none';
+            document.querySelectorAll('.lesson-content').forEach(l => l.style.display = 'none');
+            document.getElementById(lessonId).style.display = 'block';
             window.scrollTo(0,0);
         }
 
-        // 3. دالة العودة للقائمة الرئيسية
         function hideLesson() {
-            document.querySelectorAll('.lesson-content').forEach(lesson => {
-                lesson.style.display = 'none';
-            });
-            
-            const mainUI = document.getElementById('main-ui');
-            if (mainUI) {
-                mainUI.style.display = 'block';
-            }
+            document.querySelectorAll('.lesson-content').forEach(l => l.style.display = 'none');
+            document.getElementById('main-ui').style.display = 'block';
         }
     </script>
 
