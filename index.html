@@ -47,36 +47,62 @@
         @keyframes blink { from, to { border-color: transparent } 50% { border-color: var(--primary-color) } }
 
         /* 2. الواجهة الرئيسية */
+        /* التنسيق الجديد للواجهة المرتبة */
         .container {
             max-width: 900px;
             margin: 50px auto;
             padding: 20px;
+        }
+
+        .main-header {
             text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
         }
 
         .lesson-buttons {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-bottom: 40px;
+            gap: 20px;
         }
 
-        .btn {
-            background: #333;
-            color: white;
-            padding: 20px;
-            border: 2px solid var(--primary-color);
-            border-radius: 10px;
-            font-size: 1.2rem;
+        .lesson-card {
+            background: #252525;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.3s ease;
+            text-align: right;
         }
 
-        .btn:hover {
-            background: var(--primary-color);
-            color: black;
-            transform: scale(1.02);
+        .lesson-card:hover {
+            border-color: var(--primary-color);
+            background: #2a2a2a;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
+
+        .icon { font-size: 2.5rem; margin-left: 20px; }
+        .info h3 { margin: 0; color: var(--primary-color); }
+        .info p { margin: 5px 0 0; font-size: 0.9rem; color: #888; }
+        .arrow { margin-right: auto; font-size: 1.5rem; color: var(--primary-color); opacity: 0.5; }
+
+        .btn-back {
+            background: #444;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 30px;
+            display: inline-block;
+        }
+        .btn-back:hover { background: var(--primary-color); color: black; }
+
 
         /* 3. منطقة الشرح */
         .lesson-content {
