@@ -1,40 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-  <title>SniperWeird</title>
-  <style>
-    body {
-      background: black;
-      color: white;
-      text-align: center;
-      font-family: Arial;
-      margin-top: 100px;
-    }
-    h1 {
-      color: cyan;
-      font-size: 50px;
-    }
-    p {
-      color: lightgray;
-      font-size: 20px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      background: cyan;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دروس الأحياء | Ali Aboubaker</title>
+    <style>
+        :root {
+            --primary-color: #2ecc71;
+            --dark-color: #1a1a1a;
+            --text-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-color);
+            color: var(--text-color);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* 1. شاشة الترحيب */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 1s ease-out;
+        }
+
+        .splash-text {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            border-right: 3px solid var(--primary-color);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(30, end), blink .5s step-end infinite;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink { from, to { border-color: transparent } 50% { border-color: var(--primary-color) } }
+
+        /* 2. الواجهة الرئيسية */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .lesson-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background: #333;
+            color: white;
+            padding: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            color: black;
+            transform: scale(1.02);
+        }
+
+        /* 3. منطقة الشرح */
+        .lesson-content {
+            display: none; /* مخفي افتراضياً */
+            background: #252525;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: right;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .image-box {
+            background: #444;
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: #888;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>🔥 SniperWeird 🔥</h1>
-  <p>This is my upgraded site 😎</p>
+    <div id="splash-screen">
+        <div class="splash-text">Prepared by: Ali Aboubaker</div>
+    </div>
 
-  <button onclick="alert('Welcome 😎🔥')">
-    Click me
-  </button>
+    <div class="container">
+        <h1>📚 بوابة دروس الأحياء</h1>
+        <p>اختر الدرس لبدء الشرح الممتع</p>
+
+        <div class="lesson-buttons">
+            <button class="btn" onclick="showLesson('lesson1')">الدرس الأول: مقدمة في علم الأحياء</button>
+            <button class="btn" onclick="showLesson('lesson2')">الدرس الثاني: التركيب الكيميائي للخلية</button>
+        </div>
+
+<div id="lesson1" class="lesson-content">
+    <h2 style="color: var(--primary-color); text-align: center;">🩸 الإخراج لدى الإنسان</h2>
+    
+    <p>لكي يعيش الإنسان بصورة طبيعية، يجب أن يتخلص جسمه من الفضلات. إليك ملخص العملية:</p>
+
+    <div class="important-note" style="background: #2a3d30; padding: 15px; border-right: 5px solid var(--primary-color); border-radius: 5px;">
+        <strong>ما هو الإخراج؟</strong> هو عملية التخلص من فضلات النيتروجين (اليوريا Urea) الناتجة عن هضم البروتينات، والحفاظ على <b>الاتزان الداخلي (Homeostasis)</b> لسوائل الجسم.
+    </div>
+
+    <h3>1. الأعضاء الأساسية (الكليتان - Kidneys)</h3>
+    <p>تقع الكليتان عند قاع القفص الصدري وظيفتها الأساسية <b>ترشيح الدم</b> من الفضلات. الدم الذي يدخل الكلية يشكل حوالي 25% من دم الجسم في أي وقت!</p>
+    
+    <div style="text-align: center;">
+        <img src="excretory_system.png" alt="الجهاز الإخراجي" style="width: 100%; max-width: 500px; border-radius: 15px; border: 2px solid #444;">
+        <p style="font-size: 0.9rem; color: #888;">شكل (1): هيكل الجهاز الإخراجي وموقع الكليتين.</p>
+    </div>
+
+    <h3>2. مسار البول (من الكلية إلى الخارج)</h3>
+    <p>بعد ترشيح الدم وتكوين البول، يمر بالخطوات التالية:</p>
+    <ul style="list-style-type: square; padding-right: 20px;">
+        <li><b>الحالب (Ureter):</b> أنبوب طويل (25-30 سم) ينقل البول من الكلية للمثانة.</li>
+        <li><b>المثانة البولية:</b> كيس عضلي يخزن البول مؤقتاً.</li>
+        <li><b>مجرى البول (Urethra):</b> القناة التي يطرد من خلالها البول لخارج الجسم.</li>
+    </ul>
+
+    <div class="important-note" style="background: #333; padding: 10px;">
+        💡 <b>كيف نعرف أننا بحاجة للتبول؟</b> عندما تمتليء المثانة، ترسل عضلاتها إشارات للدماغ، والذي يعطي أمراً للعضلات لتنقبض وتطرد البول.
+    </div>
+
+    <h3>📺 شاهد هذا الفيديو لتبسيط العملية:</h3>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/tS04vW-OAtw" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="hideLesson()" class="btn" style="padding: 10px 25px;">العودة للقائمة الرئيسية</button>
+    </div>
+</div>
+
+            
+            <h3>فيديو توضيحي:</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/فيديو_هنا" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button onclick="hideLesson()" class="btn" style="padding: 10px; font-size: 0.9rem;">عودة للقائمة</button>
+        </div>
+
+        <div id="lesson2" class="lesson-content">
+            <h2>شرح الدرس الثاني</h2>
+            <p>محتوى الدرس الثاني والفقرات التابعة له.</p>
+            <div class="image-box">صورة رقم 2 (مثلاً: رسمة الخلية)</div>
+            <button onclick="hideLesson()" class="btn" style="padding: 10px; font-size: 0.9rem;">عودة للقائمة</button>
+        </div>
+    </div>
+
+    <script>
+        // إخفاء شاشة الترحيب بعد 3 ثواني
+        setTimeout(() => {
+            const splash = document.getElementById('splash-screen');
+            splash.style.opacity = '0';
+            setTimeout(() => splash.style.display = 'none', 1000);
+        }, 3000);
+
+        function showLesson(lessonId) {
+            document.querySelectorAll('.lesson-content').forEach(l => l.style.display = 'none');
+            document.querySelector('.lesson-buttons').style.display = 'none';
+            document.getElementById(lessonId).style.display = 'block';
+        }
+
+        function hideLesson() {
+            document.querySelectorAll('.lesson-content').forEach(l => l.style.display = 'none');
+            document.querySelector('.lesson-buttons').style.display = 'flex';
+        }
+    </script>
 
 </body>
 </html>
