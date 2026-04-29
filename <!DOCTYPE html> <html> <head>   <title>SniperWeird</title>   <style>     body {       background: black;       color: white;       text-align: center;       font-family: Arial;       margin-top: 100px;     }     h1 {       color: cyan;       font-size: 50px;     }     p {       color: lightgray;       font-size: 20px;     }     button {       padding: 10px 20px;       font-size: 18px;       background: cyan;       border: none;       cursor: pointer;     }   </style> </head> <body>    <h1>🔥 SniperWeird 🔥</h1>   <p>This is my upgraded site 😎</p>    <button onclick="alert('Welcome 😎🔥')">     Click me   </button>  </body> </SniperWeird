@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SniperWeird</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+    h1 {
+      color: cyan;
+      font-size: 50px;
+    }
+    p {
+      color: lightgray;
+      font-size: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background: cyan;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 SniperWeird 🔥</h1>
+  <p>This is my upgraded site 😎</p>
+
+  <button onclick="alert('Welcome 😎🔥')">
+    Click me
+  </button>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>SniperWeird</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+    h1 {
+      color: cyan;
+      font-size: 50px;
+    }
+    p {
+      color: lightgray;
+      font-size: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background: cyan;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 SniperWeird 🔥</h1>
+  <p>This is my upgraded site 😎</p>
+
+  <button onclick="alert('Welcome 😎🔥')">
+    Click me
+  </button>
+
+</body>
+</html>
