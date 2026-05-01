@@ -20,19 +20,21 @@
         }
 
         /* 1. شاشة الترحيب */
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: Black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            transition: opacity 1s ease-out;
-        }
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #2c3e50, #000); /* تدرج فخم */
+    display: flex;
+    flex-direction: column; /* لترتيب النصوص فوق بعضها */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 1s ease-out;
+}
+
 
         .splash-text {
             font-size: 2.5rem;
@@ -131,9 +133,20 @@
 </head>
 <body>
 
-    <div id="splash-screen">
-        <div class="splash-text">علي محمد أبوبكر</div>
-    </div>
+<div id="splash-screen">
+    <!-- جملة إعداد الطالب -->
+    <p style="color: #fff; font-size: 1.1rem; margin-bottom: 5px; opacity: 0.8;">إعداد الطالب:</p>
+    
+    <!-- اسمك بتأثير الكتابة -->
+    <div class="splash-text">علي محمد أبوبكر</div>
+    
+    <!-- عنوان المشروع -->
+    <p style="color: #f1c40f; margin-top: 20px; font-size: 1.2rem; font-weight: bold; border-top: 1px solid rgba(241, 242, 15, 0.3); padding-top: 10px;">
+        🔬 مشروع الأحياء 🔬
+    </p>
+</div>
+
+
 
     <div id="main-ui" class="container">
         <div class="main-header">
