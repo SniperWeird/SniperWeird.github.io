@@ -20,20 +20,31 @@
         }
 
         /* 1. شاشة الترحيب */
-#splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #2c3e50, #000); /* تدرج فخم */
-    display: flex;
-    flex-direction: column; /* لترتيب النصوص فوق بعضها */
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-    transition: opacity 1s ease-out;
+.splash-text {
+    font-size: 2.5rem;
+    color: #ff0000; /* أحمر */
+    text-shadow: 0 0 15px #ff0000; /* التوهج اللي طلبته */
+    border-right: 3px solid #ff0000; /* المؤشر يمين النص العربي */
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto; /* يضمن بقاءه في المنتصف */
+    direction: rtl; /* اتجاه عربي */
+    width: 0; /* يبدأ من صفر عشان يتحرك */
+    animation: typing 2.5s steps(30, end) forwards, blink .5s step-end infinite;
 }
+
+/* حركة الكتابة من اليمين لليسار مع ضمان التمركز */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 15ch; } /* ch تعني عدد الحروف تقريباً ليبقى متمركزاً */
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #ff0000; }
+}
+
 
 
 .splash-text {
