@@ -19,6 +19,22 @@
             overflow-x: hidden;
         }
 
+        #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* هذا هو الكود المسؤول عن الـ gradient الفخم */
+    background: radial-gradient(circle, #2c3e50, #000); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 1s ease-out;
+}
+
         /* 1. شاشة الترحيب */
 .splash-text {
     font-size: 2.5rem;
